@@ -120,6 +120,7 @@ namespace StockExplore
 
         /// <summary>
         /// 从文本文件加载数据，小于最大日期的数据直接过滤掉
+        /// 读取通达信日线文件代码
         /// </summary>
         private void LoadDayLineFileData_exportFile(string fileFullName, StockHead stkHead, DateTime existMaxDay, ref DataTable insTable)
         {
