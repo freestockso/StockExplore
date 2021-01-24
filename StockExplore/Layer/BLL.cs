@@ -96,7 +96,7 @@ namespace StockExplore
                  @"\T0002\hq_cache\szm.tnf");
         }
 
-        /// <summary> 日线数据所在文件夹
+        /// <summary> 通达信日线数据文件目录位置
         /// </summary>
         public static string GetDayLineFileFolder(string markType)
         {
