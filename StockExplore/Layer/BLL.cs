@@ -87,7 +87,7 @@ namespace StockExplore
          }
 
         /// <summary> 
-        /// 通达信放股票代码的文件
+        /// 通达信放股票代码的文件目录位置及文件名称
         /// </summary>
         public static TupleValue<string, string> StockHeadFileName()
         {
