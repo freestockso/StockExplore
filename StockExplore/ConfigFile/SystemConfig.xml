@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SystemConfig>
+  <DatabaseConfig>
+    <key name="ConnectionString" value="Data Source=localhost;Initial Catalog=StockExp;Integrated Security=True;" />
+  </DatabaseConfig>
+  <AppConfig>
+    <key name="SourceFolder" value="" remark="" />
+    <key name="TDXFolder" value="C:\new_tdx\" remark="通达信安装目录" />
+  </AppConfig>
+</SystemConfig>
