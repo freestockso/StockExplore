@@ -159,11 +159,11 @@ namespace StockExplore
 
             LoadConfig();
 
-            new Thread(() =>
-            {
-                if (!SQLHelper.TestConnectString(CommProp.ConnectionString))
-                    Console.WriteLine("数据库连接错误!");
-            }).Start();
+            //new Thread(() =>
+            //{
+            //    if (!SQLHelper.TestConnectString(CommProp.ConnectionString))
+            //        Console.WriteLine("数据库连接错误!");
+            //}).Start();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -525,6 +525,11 @@ namespace StockExplore
             }
 
             UIInProcess(false);
+        }
+
+        private void tabPageDataImport_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

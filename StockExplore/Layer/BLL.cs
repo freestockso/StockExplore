@@ -63,7 +63,8 @@ namespace StockExplore
             return lstStockBlockType.Select(StockBlockTypeName).ToList();
         }
 
-        /// <summary> 通达信板块文件
+        /// <summary> 
+        /// 通达信板块文件目录位置及文件名称
         /// </summary>
          public static string StockBlockFileName(StockBlockType stockBlockType)
          {
@@ -85,7 +86,8 @@ namespace StockExplore
              }
          }
 
-        /// <summary> 通达信放股票代码的文件
+        /// <summary> 
+        /// 通达信放股票代码的文件
         /// </summary>
         public static TupleValue<string, string> StockHeadFileName()
         {

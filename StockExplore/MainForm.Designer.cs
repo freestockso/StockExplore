@@ -32,6 +32,7 @@
             this.grpBlock = new System.Windows.Forms.GroupBox();
             this.dataImptBtnBlockImport1 = new System.Windows.Forms.Button();
             this.grpDayKLine = new System.Windows.Forms.GroupBox();
+            this.dataImptDayKLineChkTDXFile = new System.Windows.Forms.CheckBox();
             this.dataImptBtnDayKLineImport = new System.Windows.Forms.Button();
             this.dataImptDayKLineChkIsComposite = new System.Windows.Forms.CheckBox();
             this.dataImptDayKLineChkConvert = new System.Windows.Forms.CheckBox();
@@ -39,6 +40,7 @@
             this.txtSourceFolder = new System.Windows.Forms.TextBox();
             this.btnSourceFolderBrowser = new System.Windows.Forms.Button();
             this.tabPageDataClear = new System.Windows.Forms.TabPage();
+            this.dataClearBtnTruncateAllTable = new System.Windows.Forms.Button();
             this.dataClearBtnStockHeadTruncate = new System.Windows.Forms.Button();
             this.dataClearBtnWeekKLineTruncate = new System.Windows.Forms.Button();
             this.dataClearBtnDayKLineZSTruncate = new System.Windows.Forms.Button();
@@ -50,8 +52,6 @@
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.bkgDataImport = new System.ComponentModel.BackgroundWorker();
-            this.dataImptDayKLineChkTDXFile = new System.Windows.Forms.CheckBox();
-            this.dataClearBtnTruncateAllTable = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -121,6 +121,7 @@
             this.tabPageDataImport.TabIndex = 0;
             this.tabPageDataImport.Text = "数据导入";
             this.tabPageDataImport.UseVisualStyleBackColor = true;
+            this.tabPageDataImport.Click += new System.EventHandler(this.tabPageDataImport_Click);
             // 
             // dataImptBtnStkHeadImport
             // 
@@ -175,6 +176,16 @@
             this.grpDayKLine.TabIndex = 17;
             this.grpDayKLine.TabStop = false;
             this.grpDayKLine.Text = "日K线";
+            // 
+            // dataImptDayKLineChkTDXFile
+            // 
+            this.dataImptDayKLineChkTDXFile.AutoSize = true;
+            this.dataImptDayKLineChkTDXFile.Location = new System.Drawing.Point(65, 44);
+            this.dataImptDayKLineChkTDXFile.Name = "dataImptDayKLineChkTDXFile";
+            this.dataImptDayKLineChkTDXFile.Size = new System.Drawing.Size(66, 16);
+            this.dataImptDayKLineChkTDXFile.TabIndex = 2;
+            this.dataImptDayKLineChkTDXFile.Text = "TDX文件";
+            this.dataImptDayKLineChkTDXFile.UseVisualStyleBackColor = true;
             // 
             // dataImptBtnDayKLineImport
             // 
@@ -253,6 +264,21 @@
             this.tabPageDataClear.TabIndex = 1;
             this.tabPageDataClear.Text = "数据清理";
             this.tabPageDataClear.UseVisualStyleBackColor = true;
+            // 
+            // dataClearBtnTruncateAllTable
+            // 
+            this.dataClearBtnTruncateAllTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataClearBtnTruncateAllTable.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.dataClearBtnTruncateAllTable.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.dataClearBtnTruncateAllTable.ForeColor = System.Drawing.Color.DarkRed;
+            this.dataClearBtnTruncateAllTable.Location = new System.Drawing.Point(515, 144);
+            this.dataClearBtnTruncateAllTable.Name = "dataClearBtnTruncateAllTable";
+            this.dataClearBtnTruncateAllTable.Size = new System.Drawing.Size(126, 34);
+            this.dataClearBtnTruncateAllTable.TabIndex = 14;
+            this.dataClearBtnTruncateAllTable.TabStop = false;
+            this.dataClearBtnTruncateAllTable.Text = "清空全表！！！";
+            this.dataClearBtnTruncateAllTable.UseVisualStyleBackColor = true;
+            this.dataClearBtnTruncateAllTable.Click += new System.EventHandler(this.dataClearBtnTruncateAllTable_Click);
             // 
             // dataClearBtnStockHeadTruncate
             // 
@@ -373,31 +399,6 @@
             this.bkgDataImport.WorkerReportsProgress = true;
             this.bkgDataImport.WorkerSupportsCancellation = true;
             this.bkgDataImport.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bkgDataImport_DoWork);
-            // 
-            // dataImptDayKLineChkTDXFile
-            // 
-            this.dataImptDayKLineChkTDXFile.AutoSize = true;
-            this.dataImptDayKLineChkTDXFile.Location = new System.Drawing.Point(65, 44);
-            this.dataImptDayKLineChkTDXFile.Name = "dataImptDayKLineChkTDXFile";
-            this.dataImptDayKLineChkTDXFile.Size = new System.Drawing.Size(66, 16);
-            this.dataImptDayKLineChkTDXFile.TabIndex = 2;
-            this.dataImptDayKLineChkTDXFile.Text = "TDX文件";
-            this.dataImptDayKLineChkTDXFile.UseVisualStyleBackColor = true;
-            // 
-            // dataClearBtnTruncateAllTable
-            // 
-            this.dataClearBtnTruncateAllTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataClearBtnTruncateAllTable.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.dataClearBtnTruncateAllTable.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.dataClearBtnTruncateAllTable.ForeColor = System.Drawing.Color.DarkRed;
-            this.dataClearBtnTruncateAllTable.Location = new System.Drawing.Point(515, 144);
-            this.dataClearBtnTruncateAllTable.Name = "dataClearBtnTruncateAllTable";
-            this.dataClearBtnTruncateAllTable.Size = new System.Drawing.Size(126, 34);
-            this.dataClearBtnTruncateAllTable.TabIndex = 14;
-            this.dataClearBtnTruncateAllTable.TabStop = false;
-            this.dataClearBtnTruncateAllTable.Text = "清空全表！！！";
-            this.dataClearBtnTruncateAllTable.UseVisualStyleBackColor = true;
-            this.dataClearBtnTruncateAllTable.Click += new System.EventHandler(this.dataClearBtnTruncateAllTable_Click);
             // 
             // MainForm
             // 
