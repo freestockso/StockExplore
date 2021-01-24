@@ -112,10 +112,12 @@ namespace StockExplore
             }
         }
 
-        /// <summary>base.dbf 文件缓存
-         /// </summary>
         private static DataTable _baseDbf = null;
-        /// <summary> 从 base.dbf 中加载数据
+
+        /// <summary>base.dbf 文件缓存
+        /// </summary>
+
+        /// <summary> 从文件base.dbf 中读取数据，并加载到TDbfTable控件
         /// </summary>
         /// <param name="fileName">base.dbf 文件全名</param>
         /// <returns></returns>
